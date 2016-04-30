@@ -1,7 +1,8 @@
 #!/bin/sh
 set -e
 
-DIR=$(dirname `readlink -f $0`)
+# Can't use readlink -f here because OS X doesn't support that
+DIR=$(dirname `perl -e 'use Cwd "abs_path";print abs_path(shift)' $0`)
 
 try_link () {
     local src="$1"
