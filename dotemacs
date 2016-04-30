@@ -61,8 +61,8 @@
 ;; (server-start)
 
 ;; load ordered init files
-(load-file "dotemacs.d/utils.el")
-(liuw/load-ordered-startup-el "dotemacs.d/init-files")
+(load-file "~/dotfiles/dotemacs.d/utils.el")
+(liuw/load-ordered-startup-el "~/dotfiles/dotemacs.d/init-files")
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
