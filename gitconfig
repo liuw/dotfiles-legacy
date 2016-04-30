@@ -1,0 +1,32 @@
+[user]
+	name = Wei Liu
+	email = liuw@liuw.name
+
+[core]
+	editor = vim --cmd 'set ft=gitcommit tw=70 wrap'
+
+[rerere]
+	enabled = true
+
+[color]
+	ui = auto
+
+[diff]
+	tool = vimdiff
+	renames = true
+
+[difftool]
+	prompt = false
+
+[alias]
+	st = status
+	ci = commit
+	cp = cherry-pick
+	co = checkout
+	br = branch
+	di = diff
+	dt = difftool
+	sh = show
+	oneline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[push]
+	default = current
