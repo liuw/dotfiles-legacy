@@ -59,7 +59,7 @@ nnoremap <Leader>e :e <C-R>=expand('%:p:h') . '/'<CR>
 " show invisibles
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
-set list
+" set list
 
 " auto change directory to current buffer
 " set autochdir
