@@ -33,3 +33,15 @@ Repeated invocations toggle between the two most recently open buffers."
 ;; Use helm-M-x if available
 (if (fboundp 'helm-M-x)
     (global-set-key (kbd "M-x") 'helm-M-x))
+
+(add-hook 'gtags-mode-hook
+	  (lambda()
+	    (global-set-key (kbd "M-.") 'gtags-find-tag)
+	    (global-set-key (kbd "M-,") 'gtags-find-rtag)
+	    (global-set-key (kbd "M-8") 'gtags-pop-stack)))
+
+(add-hook 'helm-gtags-mode-hook
+	  (lambda()
+	    (global-set-key (kbd "M-.") 'helm-gtags-find-tag)
+	    (global-set-key (kbd "M-,") 'helm-gtags-find-rtag)
+	                (global-set-key (kbd "M-8") 'helm-gtags-pop-stack)))
