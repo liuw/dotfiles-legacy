@@ -57,3 +57,5 @@
 ;; No more annoying bells
 (setq visible-bell nil)
 (setq ring-bell-function 'ignore)
+
+(setq visible-cursor nil)
