@@ -3,7 +3,7 @@
 	email = liuw@liuw.name
 
 [core]
-	editor = vim --cmd 'set ft=gitcommit tw=70 wrap'
+	editor = vim -c 'set ft=gitcommit tw=70 wrap' -c ':0'
 
 [rerere]
 	enabled = true
@@ -14,9 +14,13 @@
 [diff]
 	tool = vimdiff
 	renames = true
+	compactionHeuristic = true
 
 [difftool]
 	prompt = false
+
+[rerere]
+	enabled = true
 
 [alias]
 	st = status
