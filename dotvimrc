@@ -46,6 +46,7 @@ map <DOWN> gj
 nmap <silent> <tab> :bn<CR>
 nmap <silent> <s-tab> :bp<CR>
 nnoremap ; :
+nnoremap <F5> :buffers<CR>:buffer<Space>
 let mapleader = ','
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
