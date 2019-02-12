@@ -29,6 +29,11 @@
 ))
 (setq inhibit-startup-screen t)
 
+(defun random-color-theme ()
+  (interactive)
+  (random t)
+  (funcall (car (nth (random (length color-themes)) color-themes))))
+
 ;; only use color theme for window system
 (if window-system
 	(progn
@@ -38,6 +43,9 @@
 ;;	  (color-theme-comidia)
 ;;	  (color-theme-calm-forest)
 ;;          (color-theme-monokai)
+;;          (color-theme-tty-dark)
+	  (random-color-theme)
+	  (run-with-timer 1 (* 60 60) 'random-color-theme)
 	  )
   )
 
