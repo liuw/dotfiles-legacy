@@ -8,7 +8,7 @@ try_link () {
     local src="$1"
     local dst="$2"
     if [ -e "$dst" ]; then
-	echo "$dst already exist, skipped."
+	echo "$dst already exists, skipped."
     else
 	ln -s "$src" "$dst"
 	echo "Linked $src to $dst."
