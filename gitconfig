@@ -23,7 +23,7 @@
 	enabled = true
 
 [alias]
-	st = status
+	st = status -s
 	ci = commit
 	cp = cherry-pick
 	co = checkout
@@ -32,5 +32,19 @@
 	dt = difftool
 	sh = show
 	oneline = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+	curr = rev-parse --abbrev-ref HEAD
+	refactor = !sh -c 'git grep -l \"$1\" -- $GIT_PREFIX | xargs sed \"s|$1|$2|g\" -i' -
+
+	marker = !bash -c 'touch .marker-$1 && git add .marker-$1 && git commit -m "---$1---"' -
+	behind = !bash -c 'git branch -vv | grep behind' -
+	ahead = !bash -c 'git branch -vv | grep ahead' -
+
 [push]
 	default = current
+
+[format]
+	pretty = fuller
+
+[grep]
+	lineNumber = true
