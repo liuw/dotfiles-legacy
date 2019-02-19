@@ -27,7 +27,7 @@
 	ci = commit
 	cp = cherry-pick
 	co = checkout
-	br = branch
+	br = branch -vv
 	di = diff
 	dt = difftool
 	sh = show
